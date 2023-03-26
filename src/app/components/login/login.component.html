@@ -1,0 +1,15 @@
+
+
+<form>
+    <div>
+        <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+        <label>Email</label>
+    </div>
+    <div>
+        <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+        <label>Password</label>
+    </div>
+
+    <button (click)="login()">Log In</button>
+
+</form>

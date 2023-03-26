@@ -1,0 +1,157 @@
+[
+    {
+        "name": "Easter Island",
+        "country": "Chile",
+        "startDate": "2022-09-08",
+        "endDate": "2022-09-14",
+        "price": 1300,
+        "freePlaces": 23,
+        "img": "../../../assets/tripImages/easterIsland.jpg",
+        "id": 0,
+        "reviews":12,
+        "stars": 3,
+        "detailedReview": [
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            },
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            }
+        ]
+    },
+    {
+        "name": "Pyramids Of Giza",
+        "country": "Egipt",
+        "startDate": "2022-09-11",
+        "endDate": "2022-09-15",
+        "price": 1800,
+        "freePlaces": 2,
+        "img": "../../../assets/tripImages/giza.jpg",
+        "id": 1,
+        "reviews":110,
+        "stars": 3,
+        "detailedReview": [
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            },
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            }
+        ]
+    },
+  
+    {
+        "name": "Barbados Island",
+        "country": "Barbados",
+        "startDate": "2022-09-11",
+        "endDate": "2022-09-15",
+        "price": 1100,
+        "freePlaces": 16,
+        "img": "../../../assets/tripImages/barbados.jpg",
+        "id": 3,
+        "reviews":86,
+        "stars": 5,
+        "detailedReview": [
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            },
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            }
+        ]
+    },
+    {
+        "name": "Warsaw",
+        "country": "Poland",
+        "startDate": "2022-10-11",
+        "endDate": "2022-10-15",
+        "price": 2000,
+        "freePlaces": 7,
+        "img": "../../../assets/tripImages/warsaw.jpg",
+        "id": 4,
+        "reviews":62,
+        "stars": 3,
+        "detailedReview": [
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            },
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            }
+        ]
+    },
+    {
+        "name": "New York",
+        "country": "The USA",
+        "startDate": "2022-11-11",
+        "endDate": "2022-11-15",
+        "price": 5000,
+        "freePlaces": 16,
+        "img": "../../../assets/tripImages/ny.jpg",
+        "id": 5,
+        "reviews":27,
+        "stars": 2,
+        "detailedReview": [
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            },
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            }
+        ]
+    },
+    {
+        "name": "Kraków",
+        "country": "Poland",
+        "startDate": "2022-11-01",
+        "endDate": "2022-11-13",
+        "price": 1900,
+        "freePlaces": 5,
+        "img": "../../../assets/tripImages/krk.jpg",
+        "id": 6,
+        "reviews":34,
+        "stars": 3,
+        "detailedReview": [
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            },
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            }
+        ]
+    },
+    {
+        "name": "Paris",
+        "country": "France",
+        "startDate": "2022-10-05",
+        "endDate": "2022-10-12",
+        "price": 3000,
+        "freePlaces": 14,
+        "img": "../../../assets/tripImages/paris.jpg",
+        "id": 7,
+        "reviews":57,
+        "stars": 4,
+        "detailedReview": [
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            },
+            {
+                "nick": "Kacper",
+                "review": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, maiores optio atque ad, harum dignissimos reiciendis at molestiae quisquam modi ab esse? Dolores inventore vitae soluta hic repellendus quibusdam officiis?"
+            }
+        ]
+    }
+]

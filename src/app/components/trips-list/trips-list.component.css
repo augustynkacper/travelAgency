@@ -1,0 +1,187 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:90%;
+    margin:auto;
+}
+
+app-trip{
+    width:23%;
+    margin:20px 0;
+    border: 2px solid rgb(255, 225, 225);
+    border-radius: 50px;
+}
+
+
+
+.clicks{
+    text-align: center;
+    width:fit-content;
+    padding:10px;
+    border-radius: 4px;
+    margin:60px auto 10px auto;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width:fit-content;
+    margin: 20px auto;
+    padding:20px;
+    border-radius:20px;
+
+}
+
+form > h3{
+    margin:0;
+    padding:0;
+    margin-bottom:10px;
+    
+    
+}
+input{
+    width:400px;
+    margin:auto;
+    outline: none;
+    padding:6px;
+    margin-bottom:10px;
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+input[type="date"]{
+    width:150px;
+}
+
+
+
+form > div >div {
+    display:flex;
+    justify-content: center;
+}
+
+
+#submit-trip{
+    width:fit-content;
+    padding:10px;
+    border-radius: 10px;
+    background-color: rgb(136, 136, 136);
+    color:white;
+    border:none;
+    margin:auto;
+    box-shadow: 0 0 30px;
+    cursor: pointer;
+}
+
+#filter{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#filter > div{
+    align-self: center;
+}
+
+label{
+    font-size:18px;
+}
+
+input[type="date"]{
+    outline:none;
+    border-radius: 6px;
+    border: 1px solid rgb(255, 140, 140);
+    margin: 8px 8px 8px 0px;
+}
+
+/*==================*/
+.countries{
+    display: flex;
+    flex-wrap: wrap;
+    width:25%;
+}
+.country{
+    padding:7px;
+    border:1px solid rgb(250, 149, 149);
+    border-radius: 10px;
+    margin-right:10px;
+    margin-bottom: 6px;
+    cursor:pointer;
+    transition:0.2s;
+}
+.country:hover{
+    background-color: rgb(255, 140, 140);
+}
+
+.country:hover{
+    color: white;
+}
+
+
+
+@media (max-width:1500px){
+    app-trip{
+        width:30%;
+    }
+}
+
+@media (max-width:1150px){
+    app-trip{
+        width:45%;
+    }
+
+    .countries{
+        width:100%;
+    }
+
+    #filter{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:790px){
+    app-trip{
+        width:80%;
+    }
+
+    .container{
+        width:100%;
+    }
+}
+
+
+input[type=range]{
+    -webkit-appearance: none;
+    cursor:e-resize;
+    width:100%;
+    padding:0px;
+    margin:0px;
+    margin:auto;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: rgb(255, 228, 228);
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: rgb(255, 140, 140);
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+

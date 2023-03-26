@@ -1,0 +1,19 @@
+
+<form>
+    <h3 class="naglowek">Enter Your Data</h3>
+    <div>
+        <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+        <label>Email</label>
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="nick" [ngModelOptions]="{standalone: true}">
+        <label>Nick</label>
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+        <label>Password</label>
+    </div>
+
+    <button (click)="register()">Register</button>
+
+</form>

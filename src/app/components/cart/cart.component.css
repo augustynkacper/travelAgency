@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+}
+.trip{
+    display:flex;
+    align-items: center;
+    width:50%;
+    justify-content: space-between;
+    padding:15px;
+    margin: 0px auto 10px auto;
+    border-bottom: 2px solid rgb(255, 180, 180);
+}
+
+h3{
+    margin-bottom:7px;
+    color:Red;
+}
+
+h1{
+    text-align: center;
+    color:grey;
+    margin-bottom:20px;
+}
+
+.buy{
+    margin:0px auto 0px auto;
+    padding:10px 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgb(255, 142, 142);
+    color: rgb(255, 142, 142);
+    font-size:20px;
+    cursor:pointer;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    font-weight: 900;
+}
+.buy:hover{
+    color:white;
+    background-color:rgb(255, 142, 142) ;
+}
+
+.price{
+    margin-top: 7px;
+    align-self: center;
+    margin-left:30px;
+}
+
+
+/*=============*/
+.buttons{
+    display:flex;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 151, 151);
+    overflow: hidden;
+    align-items: center;
+}
+
+.buttons h4{
+    width:30px;
+    text-align: center;
+    align-self: center;
+}
+
+.buttons button {
+    font-size:25px;
+    cursor: pointer;
+}
+
+.buttons button{
+    background-color: white;
+    border:none;
+    color:rgb(255, 151, 151);
+    width:30px;
+}
+
+.buttons button:hover{
+    background-color:rgb(255, 151, 151) ;
+    color:white;
+}
+
+/*============*/
+.sum{
+    display: flex;
+    text-align: center;
+}
+
+h4{
+    color:rgb(255, 151, 151);
+}
+
+#sum{
+    font-size:25px;
+    font-weight:900;
+    color:red;
+}

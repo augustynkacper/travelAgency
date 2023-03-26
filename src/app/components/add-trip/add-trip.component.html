@@ -1,0 +1,29 @@
+<form [formGroup]="tripForm" (ngSubmit)="getTrip()">
+    <h2>Create your own Trip!</h2>
+    
+    <input type="text" formControlName="name">
+    <label>&nbsp;Name</label>
+
+    
+    <input type="text" formControlName="country">
+    <label>&nbsp;Country</label>
+
+    
+    <input type="date" formControlName="startDate">
+    <label>&nbsp;Start date</label>
+    
+    <input type="date" formControlName="endDate">
+    <label>&nbsp;End date</label>
+    
+    <input type="text"formControlName="price" id="price">
+    <label>&nbsp;Price</label>
+    
+    <input type="text" formControlName="places" id="places">
+    <label>&nbsp;Available places</label>
+
+    <input type="text" formControlName="imgurl" id="imgurl">
+    <label>&nbsp;Image URL</label>
+
+    <button id="submit-trip">Add trip</button>
+
+</form>

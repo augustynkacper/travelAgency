@@ -1,0 +1,82 @@
+
+
+<div class="container" [ngStyle]="{'border':border}">
+    <h2 class="price" *ngIf="max==trip.price">The Most Expensive</h2>
+    <h2 class="price cheap" *ngIf="min==trip.price">The Cheapest</h2>
+
+    <div id="image">
+        <div class="image-wrapper">
+            <img src="{{trip.img}}" alt="" [routerLink]="['/trip', trip.id]">
+        </div>
+        
+        <div class="name">
+            <h1>{{trip.name}}</h1>
+            <h4>&nbsp;{{trip.country}}</h4>
+        </div>
+        
+    </div>
+    
+
+    <div class="info">
+        <div class="mask" [ngStyle]="{'background-color':color, 'opacity':opacity}"></div>
+
+        <div class="wrapper">
+            <div class="stars">
+                <app-star-rate [stars]="5" class="star" [ngClass]="getClass(5)"></app-star-rate>
+                <app-star-rate [stars]="4" class="star"  [ngClass]="getClass(4)"></app-star-rate>
+                <app-star-rate [stars]="3" class="star" [ngClass]="getClass(3)"></app-star-rate>
+                <app-star-rate [stars]="2" class="star"  [ngClass]="getClass(2)"></app-star-rate>
+                <app-star-rate [stars]="1" class="star" [ngClass]="getClass(1)"></app-star-rate>
+                <p>({{trip.reviews}})</p>
+            </div>
+
+            <div class="description">
+                
+                <div class="date">
+                    <div class="from">
+                        <p>From</p>
+                        <h3>{{trip.startDate}}</h3>
+                    </div>
+                    <div class="to">
+                        <p>To</p>
+                        <h3>{{trip.endDate}}</h3>
+                    </div>
+                </div>
+
+                <div class="tp">
+                    <div class="tripprice">
+                        <p>Price</p>
+                        <h2>${{trip.price}}</h2>
+                    </div>
+                    <div class="places">
+                        <p>Tickets:</p>
+                        <h2 [ngClass]="{'red': trip.freePlaces-clicks<=3}"
+                            [ngStyle]="trip.freePlaces-clicks<=3 && {'color': 'white' } || null">
+                            {{trip.freePlaces-clicks}}
+                        </h2>
+                    </div>
+
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="buttons-wrapper">
+            <div  *ngIf="userService.isLoggedIn()" class="buttons">
+                <button (click)="click(-1)">-</button>
+                <h3>{{clicks}}</h3>
+                <button (click)="click(1)">+</button>
+            </div>
+
+            <button *ngIf="userService.isManager()" class="remove-trip" (click)="removeTrip()">
+                <fa-icon [icon]="faTrash"></fa-icon>
+            </button>
+        </div>
+        
+    </div>
+    
+    
+</div>
+
+
+

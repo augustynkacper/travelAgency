@@ -1,0 +1,21 @@
+
+
+
+<nav [ngStyle]="{'border-bottom-color': mC.borderColor}">
+    <div class="container">
+        <a id="logo" routerLink="" [ngStyle]="{'color': mC.color}">TraveLove</a>
+        <div class="links">
+            <a routerLink="trips" class="trips" (click)="mC.notHome()" [ngStyle]="{'color': mC.color}">Trip list</a>
+            <a *ngIf="userService.isManager()" routerLink="add" class="addtrip" [ngStyle]="{'color': mC.color}">Add trip</a>
+            <a routerLink="cart" class="cart" [ngStyle]="{'color': mC.color}">Cart: <span style="color:red">{{cart.length}}</span></a>
+            <a *ngIf='userService.isManager()'  routerLink="admin-view" [ngStyle]="{'color': mC.color}">Admin View</a>
+            <a *ngIf='!userService.isLoggedIn()' routerLink="login" [ngStyle]="{'color': mC.color}" >Log In</a>
+            <a *ngIf='userService.isLoggedIn()'  routerLink="logout"  [ngStyle]="{'color': mC.color}">Log Out</a>
+            <a *ngIf='!userService.isLoggedIn()'  routerLink="register"  [ngStyle]="{'color': mC.color}">Register</a>
+            <a *ngIf='userService.isLoggedIn()' routerLink="user" class="user">{{userService.user.nick}}</a>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+

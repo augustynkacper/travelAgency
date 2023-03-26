@@ -1,0 +1,32 @@
+
+
+
+<form >
+    <h2>Trip Edition</h2>
+    
+    <input type="text" value="{{trip.name}}" [(ngModel)]="newTrip.name" [ngModelOptions]="{standalone: true}">
+    <label>&nbsp;Name</label>
+
+    
+    <input type="text" value="{{trip.country}}" [(ngModel)]="newTrip.country" [ngModelOptions]="{standalone: true}">
+    <label>&nbsp;Country</label>
+
+    
+    <input type="date" value="{{trip.startDate}}" [(ngModel)]="newTrip.startDate" [ngModelOptions]="{standalone: true}">
+    <label>&nbsp;Start date</label>
+    
+    <input type="date" value="{{trip.endDate}}" [(ngModel)]="newTrip.endDate" [ngModelOptions]="{standalone: true}">
+    <label>&nbsp;End date</label>
+    
+    <input type="number" value="{{trip.price}}" [(ngModel)]="newTrip.price" [ngModelOptions]="{standalone: true}">
+    <label>&nbsp;Price</label>
+    
+    <input type="number" value="{{trip.freePlaces}}" [(ngModel)]="newTrip.freePlaces" [ngModelOptions]="{standalone: true}">
+    <label>&nbsp;Available places</label>
+
+    <input type="text" value="{{trip.img}}" [(ngModel)]="newTrip.img" [ngModelOptions]="{standalone: true}">
+    <label>&nbsp;Image URL</label>
+
+    <button id="submit-trip" (click)="editTrip()">Submit edition</button>
+
+</form>

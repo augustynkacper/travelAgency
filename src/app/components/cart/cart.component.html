@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Here are trips that you chose</h1>
+
+    <div class="trip" *ngFor="let el of cart">
+        <div class="info">
+            <h3>{{el.trip.name}},  {{el.trip.country}}</h3>
+            <p>{{el.trip.startDate}} to {{el.trip.endDate}}</p>
+            
+        </div>
+        
+        <div class="sum">
+            <div class="tickets">
+                <p>Tickets</p>
+                <div class="buttons">
+                    <button (click)="click(el.trip.id, -1)"><h4>-</h4></button>
+                    <h4>{{el.clicks}}</h4>
+                    <button (click)="click(el.trip.id, 1)"><h4>+</h4></button>
+                </div>
+            </div>
+            <h3 class="price">Price: {{el.clicks*el.trip.price}}$</h3>
+        </div>
+    </div>
+
+
+    <button *ngIf="cart.length>0" (click)="buy()" class="buy">Buy, <span id="sum">${{sum()}}</span></button>
+</div>

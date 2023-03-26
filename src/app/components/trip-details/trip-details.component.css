@@ -1,0 +1,290 @@
+
+.container{
+    width:80%;
+    margin:auto;
+    margin-top:30px;
+}
+
+.trip-info {
+    display: flex;
+    margin-bottom:30px;
+}
+
+.dates{
+    display: flex;
+}
+
+.price-places{
+    display: flex;
+}
+
+.edit{
+    border:2px solid #fd6262;
+    background-color: white;
+    text-decoration: none;
+    cursor:pointer;
+    font-size: 14px;
+    color:#fd6262;
+    border-radius: 7px;
+    padding:8px;
+    transition: 0.2s;
+    margin:20px;
+}
+
+.edit:hover{
+    background-color: #fd6262;
+    color:white;
+   
+}
+
+
+
+/*=============================================*/
+.stars{
+    display:flex;
+    flex-direction: column;
+    width:15%;
+    color:grey;
+}
+.stars > p{
+    margin-top:5px;
+    color:rgb(255, 107, 107);
+}
+
+.star{
+    width:fit-content
+}
+
+.star:nth-child(1):hover,
+.star:nth-child(1):hover ~ .star:nth-child(2),
+.star:nth-child(1):hover ~ .star:nth-child(3),
+.star:nth-child(1):hover ~ .star:nth-child(4),
+.star:nth-child(1):hover ~ .star:nth-child(5){
+    color:rgb(255, 62, 62);
+}
+
+.star:nth-child(2):hover,
+.star:nth-child(2):hover ~ .star:nth-child(3),
+.star:nth-child(2):hover ~ .star:nth-child(4),
+.star:nth-child(2):hover ~ .star:nth-child(5){
+    color:rgb(255, 62, 62);
+}
+
+
+.star:nth-child(3):hover,
+.star:nth-child(3):hover ~ .star:nth-child(4),
+.star:nth-child(3):hover ~ .star:nth-child(5){
+    color:rgb(255, 62, 62);
+}
+
+.star:nth-child(4):hover,
+.star:nth-child(4):hover ~ .star:nth-child(5){
+    color:rgb(255, 62, 62);
+}
+
+.star:nth-child(5):hover{
+    color:rgb(255, 62, 62);
+}
+
+.yellow{
+    color:rgb(255, 136, 136);
+}
+
+.white {
+    color:rgb(255, 214, 214);
+}
+
+
+
+.trip-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.image{
+    width: 300px;
+    height:400px;
+    overflow: hidden;
+    border-radius:20px;
+    overflow: hidden;
+}
+
+.image > img {
+    min-width:100%;
+    left:0;
+ 
+    height:100%;
+}
+
+.image-wrapper, .details {
+    width:48%;
+}
+
+.details {
+    align-self:center;
+    position:relative;
+}
+
+
+
+
+.from{
+    margin-left:auto;
+    margin-right:10px;
+}
+
+.dates {
+    text-align: center;
+    align-items: right;
+    
+}
+.dates h4{
+    padding:5px;
+    color: rgb(255, 94, 94);
+}
+
+.price-places{
+    text-align: center;
+    align-items: right;
+}
+
+
+.price-places h3{
+    border:1px solid rgb(255, 102, 102);
+    padding:10px;
+    border-radius: 7px;
+    color: rgb(255, 95, 95);
+}
+
+.price { 
+    margin-left:auto;
+    margin-right:0;
+}
+.price, .places {
+    margin-top:20px;
+    margin-right: 30px;
+}
+
+
+.name{
+    color:red;
+    font-weight:900;
+    text-align: right;
+}
+
+.country{
+    color:rgb(255, 94, 94);
+    margin-bottom:40px;
+    text-align: right;
+}
+
+.description{
+    width:100%;
+    text-align: right;
+    margin-right:0;
+    margin-left:auto;
+    margin-top:10px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: right;
+}
+
+.stars{
+    align-items: center;
+    text-align: center;
+}
+
+
+.reviews {
+    width:80%;
+    margin:auto;
+}
+
+
+.nick, .review{
+    display: flex;
+    flex-direction: column;
+}
+
+.nick{
+    width:200px;
+    margin-bottom:10px;
+}
+
+label{
+    color:rgb(126, 126, 126);
+    font-size:13px;
+}
+
+textarea{
+    width:80%;
+    resize: vertical;
+    max-height:100px;
+    outline:none;
+    border:none;
+    border:1px solid rgb(179, 179, 179);
+    border-radius:10px;
+    padding:10px;
+
+}
+
+.nick > input{
+    border:none;
+    border-bottom:1px solid rgb(179, 179, 179);
+    padding:5px;
+    outline:none;
+    font-size:17px;
+}
+
+button {
+    padding:10px;
+    border:1px solid rgb(255, 115, 115);
+    background-color: white;
+    color:rgb(255, 115, 115);
+    outline:none;
+    cursor:pointer;
+    border-radius: 15px;
+    margin:10px 0px;
+}
+
+.add-review{
+    margin-bottom: 20px;
+}
+
+.reviews > h4{
+    margin-bottom:10px;
+}
+
+.reviews >h2{
+    text-align: center;
+    margin-bottom:15px;
+}
+
+
+.review > h4{
+    margin-bottom:6px;
+}
+
+.review > p {
+    padding-bottom:10px;
+    border-bottom:1px solid rgb(255, 182, 182);
+    margin-bottom:15px;
+}
+
+
+
+@media (max-width:700px){
+    .container{
+        width:94%;
+    }
+
+    .description{
+        text-align: left;
+        margin:0;
+        width:100%;
+        margin-top:10px;
+    }
+}

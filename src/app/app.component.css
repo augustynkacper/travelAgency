@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+}
+
+
+nav{
+    padding:20px 0;
+    font-size:17px;
+    border-bottom: 2px solid rgba(3, 3, 3, 0.178);
+
+}
+
+
+.container{
+    display:flex;
+    width:90%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    outline:none;
+    color:rgb(63, 63, 63);
+}
+
+  #logo{
+    font-size:30px;
+}
+
+  .links{
+    align-items: center;
+}
+
+ .links{
+    display:flex;
+    justify-content: right;
+}
+ .links a{
+    padding-left:10px;
+    margin-left:15px;
+}
+
+ .links a{
+    position: relative;
+}
+ .links a::after{
+    width:100%;
+    height:3px;
+    background-color: rgb(255, 140, 140);
+    position: absolute;
+    bottom:-7px;
+    right:0px;
+    content:'';
+    opacity: 0;
+    transition:0.5s;
+    width:0;
+}
+
+ .links a:hover::after{
+
+    opacity:1;
+    width:100%
+}
+
+ .cart::after{
+    background-color: rgb(255, 140, 140);
+}
+
+
+
+ #logo{
+    position: relative;
+}
+ #logo::before{
+    top:-5px;
+    right:0px;
+}
+
+ #logo::after{
+    position: absolute;
+    height:3px;
+    bottom:-7px;
+    left:0px;
+    content:'';
+    background-color: rgb(255, 140, 140);
+    width:0px;
+    transition: 0.5s;
+}
+
+ #logo::before {
+    position: absolute;
+    height:3px;
+    top:-7px;
+    right:0px;
+    content:'';
+    background-color: rgb(255, 140, 140);
+    width:0px;
+    transition: 0.5s;
+}
+
+ #logo:hover::after,  #logo:hover::before{
+    width:110%;
+}
+
+
+
+
+.user{
+    font-weight: 900;
+    color:red;
+}

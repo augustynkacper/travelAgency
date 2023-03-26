@@ -1,0 +1,88 @@
+
+<div class="container">
+
+    <a *ngIf="userService.isManager()" class="edit" [routerLink]="['/edittrip', trip.id]">Edit Trip</a>
+
+    <div class="trip-info">
+        
+        <div class="details">
+            <h1 class="name">{{trip.name}}</h1>
+            <h4 class="country">{{trip.country}}</h4>
+
+
+            <div class="wrapper">
+                <div>
+                    <div class="dates">
+                        <div class="from">
+                            <p>From</p>
+                            <h4>{{trip.startDate}}</h4>
+                        </div>
+
+                        <div class="to">
+                            <p>To</p>
+                            <h4>{{trip.endDate}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="price-places">
+                        <div class="price">
+                            <p>Price</p>
+                            <h3>${{trip.price}}</h3>
+                        </div>
+                        <div class="places">
+                            <p>Tickets</p>
+                            <h3>{{trip.freePlaces}}</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stars">
+                    <app-star-rate class="star" (click)="getStars(5)" [ngClass]="getClass(5)"></app-star-rate>
+                    <app-star-rate class="star" (click)="getStars(4)" [ngClass]="getClass(4)"></app-star-rate>
+                    <app-star-rate class="star" (click)="getStars(3)" [ngClass]="getClass(3)"></app-star-rate>
+                    <app-star-rate class="star" (click)="getStars(2)" [ngClass]="getClass(2)"></app-star-rate>
+                    <app-star-rate class="star" (click)="getStars(1)" [ngClass]="getClass(1)"></app-star-rate>
+                    <p>({{trip.reviews}})</p>
+                </div>
+            </div>
+            <div class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt adipisci ducimus molestias! Iure hic consectetur cumque voluptatum id neque pariatur, laudantium cupiditate ullam sunt distinctio repudiandae incidunt veniam quo cum dolore nulla soluta adipisci modi esse facere reiciendis aperiam? Dignissimos!
+                
+            </div>
+
+        </div>
+
+        <div class="image-wrapper">
+            <div class="image">
+                <img [src]="trip.img" alt="">
+            </div>
+        </div>
+        
+
+        
+    </div>
+
+    
+
+    <div class="reviews">
+        
+        <div class="add-review" *ngIf="userService.hasBought(trip.id)">
+            <h4>Add your review</h4>
+            <form action="">
+                <div class="review">
+                    <textarea [(ngModel)]="review" [ngModelOptions]="{standalone: true}" maxlength="500"></textarea>
+                    <label for="">Your review</label>
+                </div>
+                <button (click)="addReview()">Add review</button>
+            </form>
+        </div>
+
+        <h2>Reviews</h2>
+
+        <div class="review" *ngFor="let i of reviews">
+            <h4>{{i.nick}}</h4>
+            <p>{{i.review}}</p>
+        </div>
+    </div>
+
+</div>

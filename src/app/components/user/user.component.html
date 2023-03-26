@@ -1,0 +1,36 @@
+
+
+<div class="container">
+
+    <div class="bought">
+        <h1>Booked Trips</h1>
+        
+        <div *ngFor="let trip of bought" class="trip">
+            <h3 class="name">{{trip.name}}</h3>
+            <div class="dates">
+                <div class="from">
+                    <p>From</p>
+                    <p>{{trip.startDate}}</p>
+                </div>
+                <div class="to">
+                    <p>To</p>
+                    <p>{{trip.endDate}}</p>
+                </div>
+            </div>
+            <div>
+                <div class="tickets">
+                    <h4>{{trip.tickets}} tickets</h4>
+                </div>
+                <div class="price">
+                    <h3>${{trip.totalPrice}}</h3>
+                </div>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+
+
+</div>

@@ -1,0 +1,94 @@
+
+
+
+
+<div class="container">
+    <div class="edition">
+        <h3>To Edit A Trip, Just Go To Trip List And Click On It To See Details</h3>
+    </div>
+
+    <div *ngIf="userService.isAdmin()" class="persistence">
+        <h3>Chose a persistence option</h3>
+
+        <div class="options">
+            <p>Local</p>
+            <p>Session</p>
+            <p>None</p>
+        </div>
+
+    </div>
+
+    <div class="users" *ngIf="userService.isAdmin()">
+        <h3>Users</h3>
+
+        <div class="list">
+            <div class="user">
+                <div class="nick">
+                    <h4>Nick</h4>
+                </div>
+                <div class="email">
+                    <h4>Email</h4>
+                </div>
+                <div class="roles-container">
+                    <div class="roles">
+                        <div>
+                            <h5>Client</h5>
+                        </div>
+                        <div>
+                            <h5>Admin</h5>
+                        </div>
+                        <div>
+                            <h5>Manager</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user" *ngFor="let user of users">
+                <div class="nick">
+                    <p>{{user.nick}}</p>
+                </div>
+                <div class="email">
+                    <p>{{user.email}}</p>
+                </div>
+                <div class="roles-container">
+                    <div class="roles">
+                        <div>
+                            <div (click)="setClient(user.id, false)" [ngStyle]="{'color': (!user.roles.client) ? 'red' : '#C6C6C6'}">
+                                <fa-icon [icon]="faNotCheck"></fa-icon>
+                            </div>
+                            <p>&nbsp;</p>
+                            <div (click)="setClient(user.id, true)" [ngStyle]="{'color': (user.roles.client) ? 'green' : '#C6C6C6'}">
+                                <fa-icon [icon]="faCheck"></fa-icon>
+                            </div>
+                        </div>
+                        <div >
+                            <div (click)="setAdmin(user.id, false)" [ngStyle]="{'color': (!user.roles.admin) ? 'red' : '#C6C6C6'}">
+                                <fa-icon [icon]="faNotCheck"></fa-icon>
+                            </div>
+                            <p>&nbsp;</p>
+                            <div (click)="setAdmin(user.id, true)" [ngStyle]="{'color': (user.roles.admin) ? 'green' : '#C6C6C6'}">
+                                <fa-icon [icon]="faCheck"></fa-icon>
+                            </div>
+                        </div>
+                        <div >
+                            <div (click)="setManager(user.id, false)"  [ngStyle]="{'color': (!user.roles.manager) ? 'red' : '#C6C6C6'}">
+                                <fa-icon [icon]="faNotCheck"></fa-icon>
+                            </div>
+                            <p>&nbsp;</p>
+                            <div (click)="setManager(user.id, true)"  [ngStyle]="{'color': (user.roles.manager) ? 'green' : '#C6C6C6'}">
+                                <fa-icon [icon]="faCheck"></fa-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banning">
+                    <button *ngIf="user.ban" (click)="ban(user.id, false)">Unban</button>
+                    <button *ngIf="!user.ban" (click)="ban(user.id, true)">Ban</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

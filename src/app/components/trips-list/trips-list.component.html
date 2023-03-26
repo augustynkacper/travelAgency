@@ -1,0 +1,89 @@
+
+
+<!--
+    
+<h1 class="clicks" [ngStyle]="{'background-color':color}">You chose {{clicks}} trips.</h1>
+
+-->
+
+<div class="container">
+    <form id="filter">
+        <div class="countries">
+            <div class="country" 
+                *ngFor="let trip of trips" 
+                (click)="countryClick(trip.country)"
+                [ngStyle]="countries.indexOf(trip.country)!==-1 && {'background-color': 'rgb(255, 140, 140)', 'color':'white'} || null"
+                >{{trip.country}}</div>
+        </div>
+        <!--
+        <div>
+            <label>Chose country     </label>
+            <select [(ngModel)]="country"  
+                [ngModelOptions]="{standalone: true}" 
+                (ngModelChange)="propertyChanged()">
+                <option>Any</option>
+                <option  *ngFor="let trip of trips">{{trip.country}}</option>
+            </select>
+        </div>
+        -->
+    
+
+        <div>
+            <label>Price range</label>
+            <div>
+                <div>
+                    <input id="leftrange" type="range" [min]="min" [max]="(max-min)/2" [value]="min"
+                        [(ngModel)]="minPrice"  
+                        [ngModelOptions]="{standalone: true}" 
+                        (ngModelChange)="propertyChanged()">
+                    <p>${{minPrice}}</p>
+                </div>
+                <div>
+                    
+                    <input id="rightrange" type="range" [max]="max" [min]="(max-min)/2" [value]="max"
+                        [(ngModel)]="maxPrice"  
+                        [ngModelOptions]="{standalone: true}" 
+                        (ngModelChange)="propertyChanged()">
+                    <p>${{maxPrice}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <label>Date range</label>
+            <div>
+            
+                    <input type="date" 
+                        [(ngModel)]="startDate"  
+                        [ngModelOptions]="{standalone: true}" 
+                        (ngModelChange)="propertyChanged()">
+        
+        
+            
+                <input type="date" 
+                    [(ngModel)]="endDate"  
+                    [ngModelOptions]="{standalone: true}" 
+                    (ngModelChange)="propertyChanged()">
+        
+            </div>
+        </div>
+
+    </form>
+
+
+    <div class="container">
+        
+        <app-trip 
+            *ngFor="let trip of trips | myfilter:createFilter()" 
+            [trip]="trip" 
+            [max]="max" 
+            [min]="min"
+            (clickEmitter)="receiveClick($event)"
+            (removeEmitter)="removeTrip($event)"
+            >
+        </app-trip>
+
+    </div>
+</div>
+
+
